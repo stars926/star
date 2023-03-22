@@ -1,0 +1,35 @@
+oss:
+  enable: minio
+  minio:
+    endpoint: http://192.168.92.136:9000
+    access-key: admin
+    secret-key: admin@123
+
+minio:
+  endpoint: http://192.168.92.136:9000
+  access-key: admin
+  secret-key: admin@123
+
+# security配置
+security:
+  # 匿名路径
+  anonymous:
+    - /login
+    - /register
+    - /test/login
+  # 放行
+  permit-all:
+    - /swagger/api/docs
+
+# token配置
+jwt:
+  # 令牌自定义标识
+  header: token
+  # 令牌密钥
+  secret: abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+  # 签发者
+  issuer: star
+  # 令牌有效期（单位：h）
+  expiration-time: 24
+  # 判断剩余多久续期（单位：h）
+  renewal-time: 1
