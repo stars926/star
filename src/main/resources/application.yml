@@ -1,5 +1,5 @@
 server:
-  port: 10000
+  port: 10001
   tomcat:
     uri-encoding: UTF-8
 #  servlet:
@@ -55,3 +55,6 @@ springdoc:
     - group: test
       packages-to-scan: com.star.web.test.controller
       paths-to-match: /
+
+liteflow:
+  rule-source: config/flow.el.xml
