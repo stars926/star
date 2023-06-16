@@ -2,9 +2,8 @@ package learn.jdk8.stream;
 
 import learn.jdk8.lambda.Student;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class FindAnyTest {
 
@@ -31,6 +30,12 @@ public class FindAnyTest {
             }
         }
 
+        // Collectors.groupingBy(UserFormDataCountBo::getFormKey,
+        //         HashMap::new,
+        //         // 时间倒序排序
+        //         Collectors.collectingAndThen(
+        //                 Collectors.toList(),
+        //                 list -> list.stream().sorted(Comparator.comparing(UserFormDataCountBo::getFormKey).reversed()).collect(Collectors.toList()))));
 
     }
 }

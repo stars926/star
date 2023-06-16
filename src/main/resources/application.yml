@@ -58,3 +58,6 @@ springdoc:
 
 liteflow:
   rule-source: config/flow.el.xml
+  when-max-wait-seconds: 15
+  when-max-workers: 16
+  when-queue-limit: 512

@@ -1,6 +1,7 @@
 package com.star.web.flw;
 
 import com.star.web.admin.pojo.po.SysUser;
+import com.yomahub.liteflow.builder.el.LiteFlowChainELBuilder;
 import com.yomahub.liteflow.core.FlowExecutor;
 import com.yomahub.liteflow.flow.LiteflowResponse;
 import jakarta.annotation.Resource;
@@ -16,6 +17,8 @@ public class YourClass {
 
     @Test
     public void testConfig() {
-        LiteflowResponse response = flowExecutor.execute2Resp("chain1", "arg");
+        LiteFlowChainELBuilder.createChain().setChainId("chainId123").setEL("THEN(a,b,c)").build();
+        LiteflowResponse response = flowExecutor.execute2Resp("chainId123", "arg");
+        // LiteflowResponse response1 = flowExecutor.execute2Resp("chain1", "arg");
     }
 }

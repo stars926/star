@@ -9,7 +9,7 @@ public class ACmp extends NodeComponent {
     @Override
     public void process() throws InterruptedException {
         //do your business
-        Thread.sleep(10000);
+        Thread.sleep(1000);
         System.out.println("a");
     }
 }
