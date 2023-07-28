@@ -1,7 +1,11 @@
-package com.star.web.admin.mapper;
+package com.star.web.admin.mapper1;
 
+import com.star.web.admin.mapper.SysUserMapper;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
 
 /**
  * @author zt
@@ -11,8 +15,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 //@RequiredArgsConstructor
 public class MybatisPlusTest {
 
-	// @Autowired
-	// private SysUserMapper sysUserMapper;
+	@Autowired
+	private SysUserMapper sysUserMapper;
 
 	@Test
 	void testNull(){

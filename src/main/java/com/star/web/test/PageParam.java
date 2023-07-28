@@ -1,6 +1,7 @@
 package com.star.web.test;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+
+import com.mybatisflex.core.paginate.Page;
 
 import java.util.List;
 
@@ -32,69 +33,69 @@ public class PageParam<T> extends Page<T> {
      * 是否进行 count 查询
      */
     private boolean isSearchCount = true;
-
-    @Override
-    public List<T> getRecords() {
-        return this.records;
-    }
-
-    @Override
-    public Page<T> setRecords(List<T> records) {
-        this.records = records;
-        return this;
-    }
-
-    @Override
-    public long getTotal() {
-        return this.total;
-    }
-
-    @Override
-    public Page<T> setTotal(long total) {
-        this.total = total;
-        return this;
-    }
-
-    public boolean getSearchCount() {
-        if (total < 0) {
-            return false;
-        }
-        return isSearchCount;
-    }
-
-    @Override
-    public boolean isSearchCount() {
-        if (total < 0) {
-            return false;
-        }
-        return isSearchCount;
-    }
-
-    @Override
-    public Page<T> setSearchCount(boolean isSearchCount) {
-        this.isSearchCount = isSearchCount;
-        return this;
-    }
-
-    @Override
-    public long getSize() {
-        return this.size;
-    }
-
-    @Override
-    public Page<T> setSize(long size) {
-        this.size = size;
-        return this;
-    }
-
-    @Override
-    public long getCurrent() {
-        return this.current;
-    }
-
-    @Override
-    public Page<T> setCurrent(long current) {
-        this.current = current;
-        return this;
-    }
+    //
+    // @Override
+    // public List<T> getRecords() {
+    //     return this.records;
+    // }
+    //
+    // @Override
+    // public Page<T> setRecords(List<T> records) {
+    //     this.records = records;
+    //     return this;
+    // }
+    //
+    // @Override
+    // public long getTotal() {
+    //     return this.total;
+    // }
+    //
+    // @Override
+    // public Page<T> setTotal(long total) {
+    //     this.total = total;
+    //     return this;
+    // }
+    //
+    // public boolean getSearchCount() {
+    //     if (total < 0) {
+    //         return false;
+    //     }
+    //     return isSearchCount;
+    // }
+    //
+    // @Override
+    // public boolean isSearchCount() {
+    //     if (total < 0) {
+    //         return false;
+    //     }
+    //     return isSearchCount;
+    // }
+    //
+    // @Override
+    // public Page<T> setSearchCount(boolean isSearchCount) {
+    //     this.isSearchCount = isSearchCount;
+    //     return this;
+    // }
+    //
+    // @Override
+    // public long getSize() {
+    //     return this.size;
+    // }
+    //
+    // @Override
+    // public Page<T> setSize(long size) {
+    //     this.size = size;
+    //     return this;
+    // }
+    //
+    // @Override
+    // public long getCurrent() {
+    //     return this.current;
+    // }
+    //
+    // @Override
+    // public Page<T> setCurrent(long current) {
+    //     this.current = current;
+    //     return this;
+    // }
 }

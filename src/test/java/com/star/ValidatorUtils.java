@@ -1,7 +1,6 @@
-package com;
+package com.star;
 
-import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
-
+import cn.hutool.core.collection.CollUtil;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
@@ -25,7 +24,7 @@ public class ValidatorUtils {
 		for (ConstraintViolation<Object> c : constraintViolations) {
 			validatedMsg.put(c.getPropertyPath().toString(), c.getMessage());
 		}
-		if (CollectionUtils.isNotEmpty(constraintViolations)) {
+		if (CollUtil.isNotEmpty(constraintViolations)) {
 			throw new Exception();
 		}
 

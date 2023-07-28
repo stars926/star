@@ -1,6 +1,7 @@
 package com.star.web.admin.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
+
+import com.mybatisflex.core.service.IService;
 import com.star.web.admin.pojo.po.SysRole;
 
 /**

@@ -1,9 +1,10 @@
 package com.star.web.admin.pojo.po;
 
+import com.mybatisflex.annotation.Id;
+import com.mybatisflex.annotation.Table;
 import com.star.common.base.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import com.baomidou.mybatisplus.annotation.*;
 
 /**
  * 角色
@@ -13,12 +14,12 @@ import com.baomidou.mybatisplus.annotation.*;
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-@TableName("sys_role")
+@Table("sys_role")
 public class SysRole extends BaseEntity {
 	/**
 	* 角色ID
 	*/
-	@TableId
+	@Id
 	private Long userId;
 
 	/**

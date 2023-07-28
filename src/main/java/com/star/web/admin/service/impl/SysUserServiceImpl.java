@@ -1,8 +1,6 @@
 package com.star.web.admin.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
+import com.mybatisflex.spring.service.impl.ServiceImpl;
 import com.star.common.exceptions.BusinessException;
 import com.star.web.admin.converter.RegisterUserConverter;
 import com.star.web.admin.mapper.SysUserMapper;
@@ -37,7 +35,8 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
 		// 加密
 		sysUser.setPassword(passwordEncoder.encode(sysUser.getPassword()));
 
-		return SqlHelper.retBool(baseMapper.insert(sysUser));
+		// return SqlHelper.retBool(baseMapper.insert(sysUser));
+		return true;
 	}
 
 	/**
@@ -47,6 +46,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
 	 * @return true：账号存在
 	 */
 	protected Boolean checkAccountUnique(String account) {
-		return baseMapper.exists(new LambdaQueryWrapper<SysUser>().eq(SysUser::getAccount, account));
+		return false;
+		// return baseMapper.exists(new LambdaQueryWrapper<SysUser>().eq(SysUser::getAccount, account));
 	}
 }

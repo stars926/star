@@ -1,6 +1,6 @@
 package com.star.web.admin.service.impl;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.mybatisflex.spring.service.impl.ServiceImpl;
 import com.star.web.admin.mapper.SysRoleMapper;
 import com.star.web.admin.pojo.po.SysRole;
 import com.star.web.admin.service.SysRoleService;

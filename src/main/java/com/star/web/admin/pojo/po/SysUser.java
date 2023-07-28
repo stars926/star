@@ -2,9 +2,10 @@ package com.star.web.admin.pojo.po;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.mybatisflex.annotation.Id;
+import com.mybatisflex.annotation.Table;
 import com.star.common.base.BaseEntity;
 import lombok.Data;
-import com.baomidou.mybatisplus.annotation.*;
 import lombok.EqualsAndHashCode;
 
 
@@ -16,13 +17,13 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-@TableName("sys_user")
+@Table("sys_user")
 public class SysUser extends BaseEntity {
 
 	/**
 	 * 主键，自增
 	 */
-	@TableId(type = IdType.AUTO)
+	@Id
 	private Long userId;
 
 	/**

@@ -1,8 +1,6 @@
 package com.star.web.admin.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.mybatisflex.core.paginate.Page;
 import com.star.common.exceptions.BusinessException;
 import com.star.common.result.Result;
 import com.star.common.validator.group.AddGroup;
@@ -31,8 +29,8 @@ public class SysRoleController {
 	 */
 	@GetMapping("/page")
 //	@PreAuthorize("@pms.hasPermission('sys:role:page')")
-	public Result<IPage<SysRole>> page(Page<SysRole> page) {
-		IPage<SysRole> sysRole = sysRoleService.page(page);
+	public Result<Page<SysRole>> page(Page<SysRole> page) {
+		Page<SysRole> sysRole = sysRoleService.page(page);
 		return Result.ok(sysRole);
 	}
 

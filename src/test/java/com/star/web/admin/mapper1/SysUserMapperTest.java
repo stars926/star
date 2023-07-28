@@ -1,7 +1,10 @@
-package com.star.web.admin.mapper;
+package com.star.web.admin.mapper1;
 
+import com.star.web.admin.pojo.po.SysUser;
 import lombok.RequiredArgsConstructor;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
 
 /**
  * @author star926

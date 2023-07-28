@@ -1,6 +1,10 @@
-package com.star.web.admin.mapper;
+package com.star.web.admin.mapper1;
 
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.Set;
 
 /**
  * @author star926

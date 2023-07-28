@@ -1,9 +1,10 @@
 package com.star.web.admin.pojo.po;
 
+import com.mybatisflex.annotation.Id;
+import com.mybatisflex.annotation.Table;
 import com.star.common.base.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import com.baomidou.mybatisplus.annotation.*;
 
 /**
  * 菜单
@@ -13,9 +14,9 @@ import com.baomidou.mybatisplus.annotation.*;
  */
 @Data
 @EqualsAndHashCode(callSuper=true)
-@TableName("sys_menu")
+@Table("sys_menu")
 public class SysMenu extends BaseEntity {
-	@TableId
+	@Id
 	private Long menuId;
 
 	/**

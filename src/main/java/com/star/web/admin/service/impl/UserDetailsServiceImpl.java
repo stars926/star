@@ -1,6 +1,5 @@
 package com.star.web.admin.service.impl;
 
-import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
 import com.star.web.admin.converter.SysUserConverter;
 import com.star.web.admin.mapper.SysUserMapper;
 import com.star.web.admin.pojo.bo.LoginUser;
@@ -31,9 +30,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
 		// 查询用户信息，若没有则抛出异常
-		SysUser user = Optional
-				.ofNullable(new LambdaQueryChainWrapper<>(sysUserMapper).eq(SysUser::getAccount, username).one())
-				.orElseThrow(() -> new UsernameNotFoundException("用户名或者密码错误！"));
+		SysUser user = new SysUser();
+		// SysUser user = Optional
+		// 		.ofNullable(new LambdaQueryChainWrapper<>(sysUserMapper).eq(SysUser::getAccount, username).one())
+		// 		.orElseThrow(() -> new UsernameNotFoundException("用户名或者密码错误！"));
 
 		// 查询用户权限信息
 		Set<String> permits = sysUserMapper.selectPermsByUserId(user.getUserId());

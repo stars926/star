@@ -1,6 +1,6 @@
 package com.star.web.admin.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mybatisflex.core.BaseMapper;
 import com.star.web.admin.pojo.po.SysRole;
 import org.springframework.stereotype.Repository;
 
